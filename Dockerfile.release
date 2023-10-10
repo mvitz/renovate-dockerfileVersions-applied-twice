@@ -1,0 +1,16 @@
+FROM alpine:3.18.4@sha256:eece025e432126ce23f223450a0326fbebde39cdf496a85d8c016293fc851978
+SHELL ["/bin/sh", "-euo", "pipefail", "-c"]
+
+# renovate: datasource=repology depName=alpine_3_18/bash versioning=loose
+ENV APK_BASH_VERSION="5.2.15-r5"
+
+# renovate: datasource=repology depName=alpine_3_18/docker-cli versioning=loose
+ENV APK_DOCKER_CLI_VERSION="23.0.6-r5"
+
+# renovate: datasource=repology depName=alpine_3_18/httpie versioning=loose
+ENV APK_HTTPIE_VERSION="3.2.1-r4"
+
+RUN apk --no-cache add --update \
+        bash="${APK_BASH_VERSION}" \
+        docker-cli="${APK_DOCKER_CLI_VERSION}" \
+        httpie="${APK_HTTPIE_VERSION}"

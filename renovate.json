@@ -1,0 +1,7 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>mvitz/renovate-dockerfileVersions-applied-twice//presets/java",
+    "github>mvitz/renovate-dockerfileVersions-applied-twice//presets/js"
+  ]
+}
